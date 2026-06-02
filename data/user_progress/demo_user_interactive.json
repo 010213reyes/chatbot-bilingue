@@ -1,0 +1,50 @@
+{
+  "user_id": "demo_user_interactive",
+  "fecha_creacion": "2026-06-02T11:50:42.474635",
+  "nivel_actual": "A1",
+  "nivel_maximo": "A1",
+  "puntuacion_total": 0,
+  "sesiones": [
+    {
+      "fecha": "2026-06-02T11:50:42.474635",
+      "duracion_minutos": 0.0,
+      "frases_practicadas": [
+        "Hola, ¿cómo estás?",
+        "Necesito ayuda",
+        "Muy bien hecho"
+      ],
+      "aciertos": 3,
+      "total": 3,
+      "accuracy": 1.0,
+      "contextos": [
+        "saludo_basico"
+      ]
+    }
+  ],
+  "frases_aprendidas": [
+    {
+      "frase": "Hi, how are you?",
+      "nivel": "A1",
+      "fecha_aprendida": "2026-06-02T11:50:42.480618",
+      "repasadas": 0
+    },
+    {
+      "frase": "I need help",
+      "nivel": "A1",
+      "fecha_aprendida": "2026-06-02T11:50:42.480618",
+      "repasadas": 0
+    },
+    {
+      "frase": "Nice job",
+      "nivel": "A1",
+      "fecha_aprendida": "2026-06-02T11:50:42.480618",
+      "repasadas": 0
+    }
+  ],
+  "estadisticas": {
+    "total_sesiones": 1,
+    "total_preguntas": 3,
+    "aciertos_totales": 3,
+    "accuracy_promedio": 1.0
+  }
+}
