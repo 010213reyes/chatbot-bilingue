@@ -1,0 +1,148 @@
+{
+  "contexts": {
+    "videojuegos_general": {
+      "nombre": "Videojuegos - General",
+      "descripcion": "Frases útiles para jugar en línea",
+      "frases": [
+        {
+          "es": "¿Quieres jugar conmigo?",
+          "en": "Do you want to play with me?",
+          "en_alt": ["Wanna play with me?", "Want to play together?"],
+          "uso": "Invitar a alguien a jugar"
+        },
+        {
+          "es": "Espéra un momento",
+          "en": "Hold on a second",
+          "en_alt": ["Wait a moment", "One sec"],
+          "uso": "Pedir que esperen"
+        },
+        {
+          "es": "Necesito ayuda",
+          "en": "I need help",
+          "en_alt": ["Help me please", "Can you help?"],
+          "uso": "Pedir asistencia en el juego"
+        },
+        {
+          "es": "Muy bien hecho",
+          "en": "Nice job",
+          "en_alt": ["Good job", "Well done", "That was great"],
+          "uso": "Felicitar a un compañero"
+        },
+        {
+          "es": "Ese fue un buen movimiento",
+          "en": "That was a good move",
+          "en_alt": ["Nice move", "Good play"],
+          "uso": "Reconocer una acción estratégica"
+        }
+      ]
+    },
+    "videojuegos_batalla": {
+      "nombre": "Videojuegos - Batalla",
+      "descripcion": "Comunicación durante combate",
+      "frases": [
+        {
+          "es": "¡Cuidado! ¡Enemigo!",
+          "en": "Watch out! Enemy!",
+          "en_alt": ["Careful! There's an enemy!", "Enemy incoming!"],
+          "uso": "Advertencia durante combate"
+        },
+        {
+          "es": "Necesito cobertura",
+          "en": "I need cover",
+          "en_alt": ["Cover me", "I need back up"],
+          "uso": "Pedir protección en batalla"
+        },
+        {
+          "es": "Voy por la derecha",
+          "en": "I'm going right",
+          "en_alt": ["Going right", "Right side"],
+          "uso": "Comunicar movimiento táctico"
+        },
+        {
+          "es": "Mira tu espalda",
+          "en": "Watch your back",
+          "en_alt": ["Behind you!", "Watch out behind"],
+          "uso": "Advertencia de enemigo atrás"
+        },
+        {
+          "es": "Objetivo completado",
+          "en": "Objective complete",
+          "en_alt": ["Mission accomplished", "Done"],
+          "uso": "Cuando se logra el objetivo"
+        }
+      ]
+    },
+    "videojuegos_coordinacion": {
+      "nombre": "Videojuegos - Coordinación",
+      "descripcion": "Frases para coordinar estrategia",
+      "frases": [
+        {
+          "es": "¿Cuál es el plan?",
+          "en": "What's the plan?",
+          "en_alt": ["What should we do?", "Any ideas?"],
+          "uso": "Preguntar estrategia"
+        },
+        {
+          "es": "Sigúeme",
+          "en": "Follow me",
+          "en_alt": ["Come with me", "Let's go"],
+          "uso": "Dirigir al equipo"
+        },
+        {
+          "es": "Esperemos aquí",
+          "en": "Let's wait here",
+          "en_alt": ["Stay here", "Hold position"],
+          "uso": "Establecer posición defensiva"
+        },
+        {
+          "es": "Espacio al enemigo",
+          "en": "Give the enemy space",
+          "en_alt": ["Back off", "Keep distance"],
+          "uso": "Tácticas de distancia"
+        },
+        {
+          "es": "Atacar juntos",
+          "en": "Attack together",
+          "en_alt": ["Let's rush", "All together", "Go go go"],
+          "uso": "Ataque coordinado"
+        }
+      ]
+    },
+    "saludo_basico": {
+      "nombre": "Saludos Básicos",
+      "descripcion": "Saludos y despedidas",
+      "frases": [
+        {
+          "es": "Hola, ¿cómo estás?",
+          "en": "Hi, how are you?",
+          "en_alt": ["Hello, how are you doing?", "Hey, what's up?"],
+          "uso": "Saludo informal"
+        },
+        {
+          "es": "Estoy bien, gracias",
+          "en": "I'm good, thanks",
+          "en_alt": ["I'm fine, thank you", "Good, thanks"],
+          "uso": "Respuesta positiva"
+        },
+        {
+          "es": "Encantado de conocerte",
+          "en": "Nice to meet you",
+          "en_alt": ["Glad to meet you", "It's nice meeting you"],
+          "uso": "Presentación formal"
+        },
+        {
+          "es": "Hasta luego",
+          "en": "See you later",
+          "en_alt": ["Goodbye", "Take care"],
+          "uso": "Despedida"
+        },
+        {
+          "es": "¿Cómo te llamas?",
+          "en": "What's your name?",
+          "en_alt": ["What are you called?", "Who are you?"],
+          "uso": "Preguntar nombre"
+        }
+      ]
+    }
+  }
+}
