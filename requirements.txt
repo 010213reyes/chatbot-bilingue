@@ -1,0 +1,24 @@
+# Red Neuronal y ML
+tensorflow==2.14.0
+numpy==1.24.3
+scikit-learn==1.3.2
+
+# Procesamiento de lenguaje natural
+nltk==3.8.1
+spacy==3.7.2
+transformers==4.34.0
+
+# Web/API
+flask==3.0.0
+python-dotenv==1.0.0
+
+# Utilidades
+pandas==2.1.1
+requests==2.31.0
+
+# Testing
+pytest==7.4.3
+
+# Desarrollo
+jupyter==1.0.0
+ipython==8.17.2
