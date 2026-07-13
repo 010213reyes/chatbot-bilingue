@@ -8,6 +8,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.models.context_manager import ContextManager
+from src.services.contextual_lesson_service import ContextualLessonService
 from typing import Dict, Optional, List
 
 
@@ -22,6 +23,7 @@ class SpanishChatbot:
             contexts_file: Ruta al archivo de contextos JSON
         """
         self.context_manager = ContextManager(contexts_file)
+        self.contextual_lesson_service = ContextualLessonService(contexts_file)
         self.current_context = None
         self.conversation_history = []
     
@@ -183,6 +185,15 @@ class SpanishChatbot:
         }
         
         return response
+
+    def get_contextual_lesson(self, context_id: Optional[str] = None) -> List[str]:
+        """Obtiene una lección textual completa por contexto."""
+        ctx = context_id or self.current_context
+
+        if not ctx:
+            return ["Debes seleccionar un contexto primero."]
+
+        return self.contextual_lesson_service.get_text_lesson(ctx)
     
     def show_menu(self) -> str:
         """Muestra menú de opciones en español."""
@@ -198,9 +209,10 @@ Opciones:
   4. Pregunta por significado en inglés
   5. Practicar frase aleatoria
   6. Ver lección de vocabulario
-  7. Salir
+    7. Ver lección contextual
+    8. Salir
 
-Selecciona una opción (1-7):
+Selecciona una opción (1-8):
 """
         return menu
 
@@ -244,6 +256,12 @@ def main():
     response = bot.practice_context()
     print(f"🤖 Bot: {response['pregunta']}")
     print(f"   Respuesta correcta: {response['respuesta_correcta']}")
+
+    # Ejemplo: Lección contextual textual
+    print("\n📘 Lección contextual:")
+    lesson_lines = bot.get_contextual_lesson()
+    for line in lesson_lines[:8]:
+        print(f"   {line}")
 
 
 if __name__ == '__main__':

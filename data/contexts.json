@@ -3,144 +3,384 @@
     "videojuegos_general": {
       "nombre": "Videojuegos - General",
       "descripcion": "Frases útiles para jugar en línea",
+      "objetivo": "Aprender frases rápidas para invitar, pedir ayuda y reaccionar en una partida",
+      "nivel": "A1",
+      "intenciones": ["invitar", "pedir ayuda", "pedir espera", "felicitar", "reconocer una jugada"],
       "frases": [
         {
           "es": "¿Quieres jugar conmigo?",
           "en": "Do you want to play with me?",
           "en_alt": ["Wanna play with me?", "Want to play together?"],
-          "uso": "Invitar a alguien a jugar"
+          "uso": "Invitar a alguien a jugar",
+          "intencion": "invitar",
+          "situacion": "iniciar una partida",
+          "nivel": "A1",
+          "explicacion": "Se usa para abrir una conversación de juego e incluir a otra persona",
+          "ejemplos": ["Do you want to play with me tonight?", "Wanna play together?"]
         },
         {
-          "es": "Espéra un momento",
+          "es": "Espera un momento",
           "en": "Hold on a second",
           "en_alt": ["Wait a moment", "One sec"],
-          "uso": "Pedir que esperen"
+          "uso": "Pedir que esperen",
+          "intencion": "pedir espera",
+          "situacion": "cuando estás ocupado y necesitas unos segundos",
+          "nivel": "A1",
+          "explicacion": "Sirve para pedir tiempo antes de continuar una acción",
+          "ejemplos": ["Hold on a second, I'm busy.", "One sec, please."]
         },
         {
           "es": "Necesito ayuda",
           "en": "I need help",
           "en_alt": ["Help me please", "Can you help?"],
-          "uso": "Pedir asistencia en el juego"
+          "uso": "Pedir asistencia en el juego",
+          "intencion": "pedir ayuda",
+          "situacion": "cuando no puedes avanzar solo",
+          "nivel": "A1",
+          "explicacion": "Es la forma directa de pedir apoyo durante una partida",
+          "ejemplos": ["I need help here.", "Can you help me?"]
         },
         {
           "es": "Muy bien hecho",
           "en": "Nice job",
           "en_alt": ["Good job", "Well done", "That was great"],
-          "uso": "Felicitar a un compañero"
+          "uso": "Felicitar a un compañero",
+          "intencion": "felicitar",
+          "situacion": "cuando alguien hace una buena jugada",
+          "nivel": "A1",
+          "explicacion": "Sirve para reconocer una buena acción o esfuerzo",
+          "ejemplos": ["Nice job!", "Well done team!"]
         },
         {
           "es": "Ese fue un buen movimiento",
           "en": "That was a good move",
           "en_alt": ["Nice move", "Good play"],
-          "uso": "Reconocer una acción estratégica"
+          "uso": "Reconocer una acción estratégica",
+          "intencion": "reconocer una jugada",
+          "situacion": "después de una acción inteligente",
+          "nivel": "A1",
+          "explicacion": "Se usa para destacar una jugada acertada o estratégica",
+          "ejemplos": ["That was a good move.", "Nice play!"]
         }
       ]
     },
     "videojuegos_batalla": {
       "nombre": "Videojuegos - Batalla",
       "descripcion": "Comunicación durante combate",
+      "objetivo": "Aprender frases para reaccionar rápido, pedir cobertura y avisar peligros",
+      "nivel": "A2",
+      "intenciones": ["advertir", "pedir cobertura", "moverse", "alertar", "cerrar objetivo"],
       "frases": [
         {
           "es": "¡Cuidado! ¡Enemigo!",
           "en": "Watch out! Enemy!",
           "en_alt": ["Careful! There's an enemy!", "Enemy incoming!"],
-          "uso": "Advertencia durante combate"
+          "uso": "Advertencia durante combate",
+          "intencion": "advertir",
+          "situacion": "cuando aparece un enemigo",
+          "nivel": "A2",
+          "explicacion": "Es una alerta rápida para reaccionar sin perder tiempo",
+          "ejemplos": ["Watch out! Enemy incoming!", "Careful, enemy here!"]
         },
         {
           "es": "Necesito cobertura",
           "en": "I need cover",
           "en_alt": ["Cover me", "I need back up"],
-          "uso": "Pedir protección en batalla"
+          "uso": "Pedir protección en batalla",
+          "intencion": "pedir cobertura",
+          "situacion": "cuando avanzas expuesto",
+          "nivel": "A2",
+          "explicacion": "Sirve para pedir apoyo defensivo en un combate",
+          "ejemplos": ["Cover me while I heal.", "I need cover now."]
         },
         {
           "es": "Voy por la derecha",
           "en": "I'm going right",
           "en_alt": ["Going right", "Right side"],
-          "uso": "Comunicar movimiento táctico"
+          "uso": "Comunicar movimiento táctico",
+          "intencion": "comunicar movimiento",
+          "situacion": "cuando cambias de flanco",
+          "nivel": "A2",
+          "explicacion": "Se usa para avisar hacia dónde te mueves",
+          "ejemplos": ["I'm going right.", "Right side, push now."]
         },
         {
           "es": "Mira tu espalda",
           "en": "Watch your back",
           "en_alt": ["Behind you!", "Watch out behind"],
-          "uso": "Advertencia de enemigo atrás"
+          "uso": "Advertencia de enemigo atrás",
+          "intencion": "alertar peligro",
+          "situacion": "cuando un rival se acerca por detrás",
+          "nivel": "A2",
+          "explicacion": "Es una advertencia breve para prevenir un ataque sorpresa",
+          "ejemplos": ["Watch your back!", "Behind you!"]
         },
         {
           "es": "Objetivo completado",
           "en": "Objective complete",
           "en_alt": ["Mission accomplished", "Done"],
-          "uso": "Cuando se logra el objetivo"
+          "uso": "Cuando se logra el objetivo",
+          "intencion": "cerrar objetivo",
+          "situacion": "al terminar una misión o reto",
+          "nivel": "A2",
+          "explicacion": "Se usa para confirmar que el objetivo ya se cumplió",
+          "ejemplos": ["Objective complete.", "Mission accomplished."]
         }
       ]
     },
     "videojuegos_coordinacion": {
       "nombre": "Videojuegos - Coordinación",
       "descripcion": "Frases para coordinar estrategia",
+      "objetivo": "Aprender frases para liderar, seguir planes y coordinar al equipo",
+      "nivel": "B1",
+      "intenciones": ["preguntar plan", "dirigir", "mantener posición", "tomar distancia", "atacar juntos"],
       "frases": [
         {
           "es": "¿Cuál es el plan?",
           "en": "What's the plan?",
           "en_alt": ["What should we do?", "Any ideas?"],
-          "uso": "Preguntar estrategia"
+          "uso": "Preguntar estrategia",
+          "intencion": "preguntar plan",
+          "situacion": "antes de tomar decisiones en equipo",
+          "nivel": "B1",
+          "explicacion": "Se usa para pedir una ruta clara antes de actuar",
+          "ejemplos": ["What's the plan for this round?", "What should we do next?"]
         },
         {
-          "es": "Sigúeme",
+          "es": "Síganme",
           "en": "Follow me",
           "en_alt": ["Come with me", "Let's go"],
-          "uso": "Dirigir al equipo"
+          "uso": "Dirigir al equipo",
+          "intencion": "dirigir",
+          "situacion": "cuando quieres avanzar con el grupo",
+          "nivel": "B1",
+          "explicacion": "Indica que otra persona debe moverse contigo",
+          "ejemplos": ["Follow me now.", "Come with me."]
         },
         {
           "es": "Esperemos aquí",
           "en": "Let's wait here",
           "en_alt": ["Stay here", "Hold position"],
-          "uso": "Establecer posición defensiva"
+          "uso": "Establecer posición defensiva",
+          "intencion": "mantener posición",
+          "situacion": "cuando conviene esperar antes de entrar",
+          "nivel": "B1",
+          "explicacion": "Sirve para frenar el avance y revisar el entorno",
+          "ejemplos": ["Let's wait here for a moment.", "Hold position."]
         },
         {
           "es": "Espacio al enemigo",
           "en": "Give the enemy space",
           "en_alt": ["Back off", "Keep distance"],
-          "uso": "Tácticas de distancia"
+          "uso": "Tácticas de distancia",
+          "intencion": "tomar distancia",
+          "situacion": "cuando necesitas evitar contacto directo",
+          "nivel": "B1",
+          "explicacion": "Se usa para mantener distancia estratégica",
+          "ejemplos": ["Keep distance.", "Back off a bit."]
         },
         {
           "es": "Atacar juntos",
           "en": "Attack together",
           "en_alt": ["Let's rush", "All together", "Go go go"],
-          "uso": "Ataque coordinado"
+          "uso": "Ataque coordinado",
+          "intencion": "atacar juntos",
+          "situacion": "cuando el equipo debe entrar al mismo tiempo",
+          "nivel": "B1",
+          "explicacion": "Se usa para sincronizar un ataque de grupo",
+          "ejemplos": ["Attack together now.", "All together!"]
         }
       ]
     },
     "saludo_basico": {
       "nombre": "Saludos Básicos",
       "descripcion": "Saludos y despedidas",
+      "objetivo": "Aprender frases esenciales para presentarse, responder y despedirse",
+      "nivel": "A1",
+      "intenciones": ["saludar", "responder", "presentarse", "despedirse", "preguntar nombre"],
       "frases": [
         {
           "es": "Hola, ¿cómo estás?",
           "en": "Hi, how are you?",
           "en_alt": ["Hello, how are you doing?", "Hey, what's up?"],
-          "uso": "Saludo informal"
+          "uso": "Saludo informal",
+          "intencion": "saludar",
+          "situacion": "cuando empieza una conversación",
+          "nivel": "A1",
+          "explicacion": "Es una forma natural de abrir una charla sencilla",
+          "ejemplos": ["Hi, how are you?", "Hello, how are you doing?"]
         },
         {
           "es": "Estoy bien, gracias",
           "en": "I'm good, thanks",
           "en_alt": ["I'm fine, thank you", "Good, thanks"],
-          "uso": "Respuesta positiva"
+          "uso": "Respuesta positiva",
+          "intencion": "responder",
+          "situacion": "cuando alguien pregunta cómo estás",
+          "nivel": "A1",
+          "explicacion": "Sirve para contestar de forma corta y natural",
+          "ejemplos": ["I'm good, thanks.", "I'm fine, thank you."]
         },
         {
           "es": "Encantado de conocerte",
           "en": "Nice to meet you",
           "en_alt": ["Glad to meet you", "It's nice meeting you"],
-          "uso": "Presentación formal"
+          "uso": "Presentación formal",
+          "intencion": "presentarse",
+          "situacion": "al conocer a alguien",
+          "nivel": "A1",
+          "explicacion": "Se usa para mostrar cortesía en un primer encuentro",
+          "ejemplos": ["Nice to meet you.", "Glad to meet you."]
         },
         {
           "es": "Hasta luego",
           "en": "See you later",
           "en_alt": ["Goodbye", "Take care"],
-          "uso": "Despedida"
+          "uso": "Despedida",
+          "intencion": "despedirse",
+          "situacion": "cuando vas a terminar la conversación",
+          "nivel": "A1",
+          "explicacion": "Es una despedida común y fácil de usar",
+          "ejemplos": ["See you later.", "Take care."]
         },
         {
           "es": "¿Cómo te llamas?",
           "en": "What's your name?",
           "en_alt": ["What are you called?", "Who are you?"],
-          "uso": "Preguntar nombre"
+          "uso": "Preguntar nombre",
+          "intencion": "preguntar nombre",
+          "situacion": "al iniciar una interacción",
+          "nivel": "A1",
+          "explicacion": "Sirve para conocer a la otra persona",
+          "ejemplos": ["What's your name?", "What are you called?"]
+        }
+      ]
+    },
+    "emociones": {
+      "nombre": "Emociones y Sentimientos",
+      "descripcion": "Frases para expresar cómo te sientes",
+      "objetivo": "Aprender a describir emociones de forma simple y natural",
+      "nivel": "A2",
+      "intenciones": ["expresar emoción", "expresar cansancio", "mostrar nervios", "expresar preocupación", "expresar orgullo"],
+      "frases": [
+        {
+          "es": "Estoy feliz",
+          "en": "I am happy",
+          "en_alt": ["I'm glad", "I feel happy"],
+          "uso": "Expresar alegría",
+          "intencion": "expresar emoción",
+          "situacion": "cuando algo te hace sentir bien",
+          "nivel": "A2",
+          "explicacion": "Sirve para decir de forma directa que estás contento",
+          "ejemplos": ["I am happy today.", "I'm really glad."]
+        },
+        {
+          "es": "Estoy cansado",
+          "en": "I am tired",
+          "en_alt": ["I'm exhausted", "I'm worn out"],
+          "uso": "Expresar cansancio",
+          "intencion": "expresar cansancio",
+          "situacion": "después de estudiar, jugar o trabajar mucho",
+          "nivel": "A2",
+          "explicacion": "Indica que necesitas descanso",
+          "ejemplos": ["I am tired after work.", "I'm exhausted."]
+        },
+        {
+          "es": "Estoy nervioso",
+          "en": "I am nervous",
+          "en_alt": ["I'm anxious", "I'm a bit nervous"],
+          "uso": "Mostrar nervios antes de algo importante",
+          "intencion": "mostrar nervios",
+          "situacion": "antes de una prueba o reto",
+          "nivel": "A2",
+          "explicacion": "Se usa cuando tienes tensión o expectativa",
+          "ejemplos": ["I'm nervous about the test.", "I am a bit nervous."]
+        },
+        {
+          "es": "Me preocupa eso",
+          "en": "I am worried about that",
+          "en_alt": ["That worries me", "I'm concerned about it"],
+          "uso": "Expresar preocupación",
+          "intencion": "expresar preocupación",
+          "situacion": "cuando algo te inquieta",
+          "nivel": "A2",
+          "explicacion": "Sirve para decir que algo te causa inquietud",
+          "ejemplos": ["I am worried about that.", "That worries me."]
+        },
+        {
+          "es": "Estoy orgulloso",
+          "en": "I am proud",
+          "en_alt": ["I'm proud of it", "I feel proud"],
+          "uso": "Expresar orgullo",
+          "intencion": "expresar orgullo",
+          "situacion": "cuando logras algo importante",
+          "nivel": "A2",
+          "explicacion": "Se usa para reconocer un logro propio o de alguien más",
+          "ejemplos": ["I am proud of you.", "I'm proud of this result."]
+        }
+      ]
+    },
+    "vida_cotidiana": {
+      "nombre": "Vida Cotidiana",
+      "descripcion": "Frases para estar ocupado, irte o pedir tiempo",
+      "objetivo": "Aprender frases útiles para avisar disponibilidad o salida",
+      "nivel": "A1",
+      "intenciones": ["decir que estas ocupado", "decir que te vas", "pedir tiempo", "posponer una respuesta", "volver luego"],
+      "frases": [
+        {
+          "es": "Estoy ocupado ahora",
+          "en": "I am busy right now",
+          "en_alt": ["I'm busy at the moment", "I can't talk right now"],
+          "uso": "Avisar que no puedes atender",
+          "intencion": "decir que estas ocupado",
+          "situacion": "cuando no puedes responder enseguida",
+          "nivel": "A1",
+          "explicacion": "Sirve para avisar que estás ocupado en ese momento",
+          "ejemplos": ["I am busy right now.", "I'm busy at the moment."]
+        },
+        {
+          "es": "Tengo que irme",
+          "en": "I have to leave",
+          "en_alt": ["I need to go", "I have to go now"],
+          "uso": "Avisar que vas a salir",
+          "intencion": "decir que te vas",
+          "situacion": "cuando terminas una conversación o partida",
+          "nivel": "A1",
+          "explicacion": "Es una forma simple de anunciar que debes salir",
+          "ejemplos": ["I have to leave now.", "I need to go."]
+        },
+        {
+          "es": "Espérame un momento",
+          "en": "Wait a moment",
+          "en_alt": ["Hold on a second", "One moment please"],
+          "uso": "Pedir unos segundos",
+          "intencion": "pedir tiempo",
+          "situacion": "cuando vas a responder o hacer algo",
+          "nivel": "A1",
+          "explicacion": "Sirve para ganar unos segundos antes de continuar",
+          "ejemplos": ["Wait a moment, please.", "Hold on a second."]
+        },
+        {
+          "es": "Luego te contesto",
+          "en": "I will reply later",
+          "en_alt": ["I'll answer later", "I will get back to you"],
+          "uso": "Posponer una respuesta",
+          "intencion": "posponer una respuesta",
+          "situacion": "cuando no puedes responder al instante",
+          "nivel": "A1",
+          "explicacion": "Se usa para indicar que responderás más tarde",
+          "ejemplos": ["I'll reply later.", "I will get back to you."]
+        },
+        {
+          "es": "Vuelvo en un rato",
+          "en": "I will be back soon",
+          "en_alt": ["I'll be right back", "Back in a bit"],
+          "uso": "Decir que regresas pronto",
+          "intencion": "volver luego",
+          "situacion": "cuando sales por poco tiempo",
+          "nivel": "A1",
+          "explicacion": "Sirve para indicar que no tardas mucho en regresar",
+          "ejemplos": ["I will be back soon.", "I'll be right back."]
         }
       ]
     }

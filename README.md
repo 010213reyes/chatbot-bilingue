@@ -163,9 +163,46 @@ transformers==4.34.0    # NLP avanzado (opcional)
 
 1. ✅ **Fase 1**: Base contextual (COMPLETADA)
 2. ✅ **Fase 2**: Red neuronal + progresión A1-B2 (COMPLETADA)
-3. **Fase 3**: Frontend web (Flask)
-4. **Fase 4**: API REST + persistencia SQL
-5. **Fase 5**: Sistema de recompensas (badges, streak counter)
+3. ✅ **Fase 3**: Chatbot contextual por situaciones reales (COMPLETADA)
+4. **Fase 4**: Memoria conversacional y aprendizaje guiado
+5. **Fase 5**: Motor neuronal de selección y priorización
+6. **Fase 6**: Frontend web + API + persistencia SQL
+7. **Fase 7**: Sistema de progreso, recompensas y personalización
+
+## 🧭 Roadmap Contextual
+
+El objetivo del siguiente ciclo es que el bot enseñe por contexto, no por clases aisladas. La prioridad no es hacerlo "más grande", sino hacerlo más útil, natural y adaptable.
+
+### Fase 3: Chatbot contextual por situaciones reales
+- Objetivo: enseñar frases útiles según intención y escenario.
+- Ejemplos: videojuegos-coordinación, pedir ayuda, despedirse, expresar sentimientos, urgencia, trabajo en equipo.
+- Entregables: catálogo de contextos, frases por contexto, variantes naturales, explicación de uso y tono.
+- Criterio de éxito: el usuario puede pedir una intención y recibir frases correctas, variantes y contexto de uso.
+
+### Fase 4: Memoria conversacional y aprendizaje guiado
+- Objetivo: guardar conversaciones y convertirlas en material reutilizable.
+- Entregables: historial de conversaciones, detección de intenciones, correcciones guardadas, frases aprobadas para incorporar.
+- Criterio de éxito: el sistema mejora con el uso sin romper respuestas ya validadas.
+
+### Fase 5: Motor neuronal de selección y priorización
+- Objetivo: usar la neurona para decidir qué mostrar, no para inventar todo desde cero.
+- Entradas: contexto, intención, nivel, historial, confianza, variabilidad de respuestas.
+- Entregables: clasificación de intención, ranking de frases, predicción de dificultad y progreso.
+- Criterio de éxito: las respuestas cambian según el usuario, pero siguen siendo naturales y consistentes.
+
+### Fase 6: Frontend web + API + persistencia SQL
+- Objetivo: sacar el flujo de consola y llevarlo a una interfaz web utilizable.
+- Entregables: frontend, API REST, almacenamiento en base de datos, autenticación básica si hace falta.
+- Criterio de éxito: el bot se puede usar de forma continua desde navegador.
+
+### Fase 7: Sistema de progreso, recompensas y personalización
+- Objetivo: hacer visible el avance del usuario.
+- Entregables: streaks, badges, progreso por contexto, recomendaciones personalizadas.
+- Criterio de éxito: el usuario siente progreso real y rutas de aprendizaje claras.
+
+## 🎯 Primera Prioridad Real
+
+Si vamos a avanzar ordenadamente, el siguiente paso técnico debe ser Fase 3: contexto y variantes naturales. Antes de ampliar neuronas, hay que ampliar el mapa de situaciones, intenciones y frases útiles.
 
 ## 🤝 Contribuir
 
@@ -182,6 +219,8 @@ git push origin feature/tu-funcionalidad
 
 - [FASE1_BASE.md](FASE1_BASE.md) - Arquitectura base del chatbot
 - [FASE2_RED_NEURONAL.md](FASE2_RED_NEURONAL.md) - Red neuronal y progresión
+- [PLAN_FASES.md](PLAN_FASES.md) - Roadmap contextual del proyecto
+- [FASE3_CONTEXTO.md](FASE3_CONTEXTO.md) - Definición técnica de aprendizaje por contexto
 
 ## 📄 Licencia
 

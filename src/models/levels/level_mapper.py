@@ -43,6 +43,8 @@ class LevelMapper:
             'videojuegos_general': 'A1',
             'videojuegos_batalla': 'A2',
             'videojuegos_coordinacion': 'B1',
+            'emociones': 'A2',
+            'vida_cotidiana': 'A1',
         }
         
         for context_id, context_data in contexts.get('contexts', {}).items():
