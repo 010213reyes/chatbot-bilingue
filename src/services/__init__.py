@@ -1,3 +1,6 @@
 # Módulo de servicios
 
 from .contextual_lesson_service import ContextualLessonService
+from .memory_service import MemoryService
+from .intention_detector_service import IntentionDetectorService
+from .correction_validator_service import CorrectionValidatorService

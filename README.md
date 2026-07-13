@@ -10,6 +10,9 @@ Chatbot inteligente basado en redes neuronales para enseñanza contextual de ing
 ✅ **Evaluación Adaptativa**: Quiz inicial para determinar nivel  
 ✅ **Rastreo de Progreso**: Persistencia JSON, estadísticas, spaced repetition  
 ✅ **Responde en Español**: Base en español, guía progresiva hacia inglés  
+✅ **Memoria Conversacional**: Registra conversaciones por usuario (Fase 4)  
+✅ **Detección de Intención**: Analiza automáticamente intención y contexto implícito (Fase 4)  
+✅ **Aprendizaje Guiado**: Captura correcciones del usuario, validación antes de incorporar (Fase 4)
 
 ## 📋 Estructura del Proyecto
 
@@ -17,26 +20,45 @@ Chatbot inteligente basado en redes neuronales para enseñanza contextual de ing
 chatbot-bilingue/
 ├── src/
 │   ├── config/
-│   │   └── settings.py              # Config centralizada
+│   │   └── settings.py                    # Config centralizada
 │   ├── models/
-│   │   ├── context_manager.py       # Gestor de contextos
+│   │   ├── context_manager.py             # Gestor de contextos
+│   │   ├── contextual/                    # Fase 3: Lecciones contextuales
+│   │   │   ├── contextual_lesson.py
+│   │   │   └── __init__.py
+│   │   ├── memory/                        # Fase 4: Memoria conversacional
+│   │   │   ├── conversation_message.py    # Mensajes y conversaciones
+│   │   │   ├── detected_intention.py      # Intención detectada
+│   │   │   ├── correction.py              # Correcciones propuestas/aprobadas
+│   │   │   └── __init__.py
 │   │   ├── levels/
-│   │   │   ├── level_manager.py     # Gestión A1-B2
-│   │   │   └── level_mapper.py      # Mapeo frases→niveles
+│   │   │   ├── level_manager.py           # Gestión A1-B2
+│   │   │   └── level_mapper.py            # Mapeo frases→niveles
 │   │   └── neural/
-│   │       └── level_classifier.py  # Red neuronal + clasificador
+│   │       └── level_classifier.py        # Red neuronal + clasificador
 │   ├── services/
-│   │   ├── evaluation_service.py    # Quiz evaluativo
-│   │   └── progress_tracker.py      # Rastreo usuario
-│   ├── chatbot.py                   # Chatbot base (español)
-│   └── advanced_chatbot.py          # Chatbot avanzado (NN + progresión)
+│   │   ├── evaluation_service.py          # Quiz evaluativo
+│   │   ├── progress_tracker.py            # Rastreo usuario
+│   │   ├── contextual_lesson_service.py   # Fase 3: Servicio de lecciones
+│   │   ├── memory_service.py              # Fase 4: Persistencia de conversaciones
+│   │   ├── intention_detector_service.py  # Fase 4: Detección de intención
+│   │   ├── correction_validator_service.py # Fase 4: Validación de correcciones
+│   │   └── __init__.py
+│   ├── chatbot.py                         # Chatbot base (español)
+│   └── advanced_chatbot.py                # Chatbot avanzado (NN + progresión)
 ├── data/
-│   ├── contexts.json                # Base de frases y contextos
-│   ├── levels/                      # Frases por nivel
-│   └── user_progress/               # Progreso de usuarios
-├── FASE1_BASE.md                    # Documentación fase 1
-├── FASE2_RED_NEURONAL.md            # Documentación fase 2
-└── requirements.txt
+│   ├── contexts.json                      # Base de frases y contextos
+│   ├── levels/                            # Frases por nivel
+│   ├── user_progress/                     # Progreso de usuarios
+│   ├── user_conversations/                # Fase 4: Historial de conversaciones
+│   └── learned_phrases.json               # Fase 4: Correcciones propuestas/aprobadas
+├── FASE1_BASE.md                          # Documentación fase 1
+├── FASE2_RED_NEURONAL.md                  # Documentación fase 2
+├── FASE3_CONTEXTO.md                      # Documentación fase 3
+├── FASE4_MEMORIA.md                       # Documentación fase 4
+├── PLAN_FASES.md                          # Plan general de fases
+├── demo_interactive.py                    # Demo interactiva fase 1-3
+└── demo_fase4.py                          # Demo fase 4: memoria y correcciones
 ```
 
 ## 📊 Niveles (CEFR)
@@ -87,10 +109,28 @@ pip install -r requirements.txt
 python src/chatbot.py
 ```
 
-### Chatbot Avanzado (Neutral Network + Progresión)
+### Chatbot Avanzado (Red Neuronal + Progresión)
 ```bash
 python src/advanced_chatbot.py
 ```
+
+### Demo Interactiva (Fases 1-3)
+```bash
+python demo_interactive.py
+```
+
+### Demo de Fase 4 (Memoria y Correcciones)
+```bash
+python demo_fase4.py
+```
+Este script demuestra:
+- Carga/creación de historial de usuario
+- Almacenamiento de mensajes con intención detectada
+- Detección de intención y contexto implícito
+- Propuesta de correcciones
+- Validación automática de correcciones
+- Aprobación/rechazo por admin
+
 
 ## 🧠 Arquitectura
 
@@ -164,7 +204,7 @@ transformers==4.34.0    # NLP avanzado (opcional)
 1. ✅ **Fase 1**: Base contextual (COMPLETADA)
 2. ✅ **Fase 2**: Red neuronal + progresión A1-B2 (COMPLETADA)
 3. ✅ **Fase 3**: Chatbot contextual por situaciones reales (COMPLETADA)
-4. **Fase 4**: Memoria conversacional y aprendizaje guiado
+4. ✅ **Fase 4**: Memoria conversacional y aprendizaje guiado (COMPLETADA)
 5. **Fase 5**: Motor neuronal de selección y priorización
 6. **Fase 6**: Frontend web + API + persistencia SQL
 7. **Fase 7**: Sistema de progreso, recompensas y personalización
