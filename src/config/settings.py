@@ -47,7 +47,7 @@ DATA_PATHS = {
 
 # Contextos disponibles por nivel
 CONTEXTS_BY_LEVEL = {
-    'A1': ['saludo_basico', 'videojuegos_general', 'vida_cotidiana'],
+    'A1': ['saludo_basico', 'videojuegos_general', 'vida_cotidiana', 'ayuda_general'],
     'A2': ['videojuegos_general', 'videojuegos_batalla', 'emociones'],
     'B1': ['videojuegos_batalla', 'videojuegos_coordinacion'],
     'B2': ['videojuegos_coordinacion'],

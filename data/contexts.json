@@ -383,6 +383,48 @@
           "ejemplos": ["I will be back soon.", "I'll be right back."]
         }
       ]
+    },
+    "ayuda_general": {
+      "nombre": "Ayuda General",
+      "descripcion": "Frases para pedir aclaración o apoyo",
+      "objetivo": "Aprender a pedir ayuda y entender mejor una conversación",
+      "nivel": "A1",
+      "intenciones": ["pedir ayuda", "pedir aclaración", "repetir", "confirmar comprensión"],
+      "frases": [
+        {
+          "es": "¿Me ayudas?",
+          "en": "Can you help me?",
+          "en_alt": ["Could you help me?", "Help me, please"],
+          "uso": "Pedir ayuda de forma directa",
+          "intencion": "pedir ayuda",
+          "situacion": "cuando necesitas apoyo inmediato",
+          "nivel": "A1",
+          "explicacion": "Es una forma simple y natural de solicitar ayuda",
+          "ejemplos": ["Can you help me with this?", "Could you help me, please?"]
+        },
+        {
+          "es": "No entiendo",
+          "en": "I don't understand",
+          "en_alt": ["I don't get it", "I'm not sure I understand"],
+          "uso": "Avisar que algo no quedó claro",
+          "intencion": "pedir aclaración",
+          "situacion": "cuando necesitas una explicación más simple",
+          "nivel": "A1",
+          "explicacion": "Sirve para pedir que te expliquen otra vez",
+          "ejemplos": ["I don't understand this part.", "I don't get it yet."]
+        },
+        {
+          "es": "¿Puedes repetirlo?",
+          "en": "Can you repeat it?",
+          "en_alt": ["Could you say that again?", "Repeat that, please"],
+          "uso": "Pedir que repitan algo",
+          "intencion": "repetir",
+          "situacion": "cuando no escuchaste bien o quieres confirmarlo",
+          "nivel": "A1",
+          "explicacion": "Es útil para recuperar una parte que no entendiste",
+          "ejemplos": ["Can you repeat it, please?", "Could you say that again?"]
+        }
+      ]
     }
   }
 }
