@@ -19,6 +19,21 @@
       "contextos": [
         "saludo_basico"
       ]
+    },
+    {
+      "fecha": "2026-07-13T14:27:19.669763",
+      "duracion_minutos": 1.760721206665039e-05,
+      "frases_practicadas": [
+        "Hola, ¿cómo estás?",
+        "Necesito ayuda",
+        "Muy bien hecho"
+      ],
+      "aciertos": 3,
+      "total": 3,
+      "accuracy": 1.0,
+      "contextos": [
+        "saludo_basico"
+      ]
     }
   ],
   "frases_aprendidas": [
@@ -39,12 +54,30 @@
       "nivel": "A1",
       "fecha_aprendida": "2026-06-02T11:50:42.480618",
       "repasadas": 0
+    },
+    {
+      "frase": "Hi, how are you?",
+      "nivel": "A1",
+      "fecha_aprendida": "2026-07-13T14:27:19.670465",
+      "repasadas": 0
+    },
+    {
+      "frase": "I need help",
+      "nivel": "A1",
+      "fecha_aprendida": "2026-07-13T14:27:19.670975",
+      "repasadas": 0
+    },
+    {
+      "frase": "Nice job",
+      "nivel": "A1",
+      "fecha_aprendida": "2026-07-13T14:27:19.671502",
+      "repasadas": 0
     }
   ],
   "estadisticas": {
-    "total_sesiones": 1,
-    "total_preguntas": 3,
-    "aciertos_totales": 3,
+    "total_sesiones": 2,
+    "total_preguntas": 6,
+    "aciertos_totales": 6,
     "accuracy_promedio": 1.0
   }
 }

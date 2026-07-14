@@ -1,20 +1,20 @@
 {
   "user_id": "demo_user",
-  "created_at": "2026-07-13T14:19:49.377429",
+  "created_at": "2026-07-13T14:23:46.099804",
   "language_level": "A2",
-  "total_conversations": 2,
+  "total_conversations": 1,
   "conversations": [
     {
-      "session_id": "session_5d49853b",
+      "session_id": "session_0862d665",
       "user_id": "demo_user",
-      "timestamp": "2026-07-13T14:19:49.386932",
+      "timestamp": "2026-07-13T14:23:46.101349",
       "language_level": "A2",
       "context_focus": "videojuegos_coordinacion",
       "messages": [
         {
           "role": "user",
           "content": "¿cómo se dice sígueme?",
-          "timestamp": "2026-07-13T14:19:49.386932",
+          "timestamp": "2026-07-13T14:23:46.101479",
           "detected_intention": "translation_request",
           "detected_context": "videojuegos_coordinacion",
           "confidence": 0.92,
@@ -25,42 +25,7 @@
         {
           "role": "assistant",
           "content": "Follow me",
-          "timestamp": "2026-07-13T14:19:49.395414",
-          "detected_intention": null,
-          "detected_context": null,
-          "confidence": 0.0,
-          "suggested_phrases": [
-            "Follow me",
-            "Come with me",
-            "Let's go"
-          ],
-          "is_correction": false,
-          "feedback_type": null
-        }
-      ]
-    },
-    {
-      "session_id": "session_ef514884",
-      "user_id": "demo_user",
-      "timestamp": "2026-07-13T14:20:38.817307",
-      "language_level": "A2",
-      "context_focus": "videojuegos_coordinacion",
-      "messages": [
-        {
-          "role": "user",
-          "content": "¿cómo se dice sígueme?",
-          "timestamp": "2026-07-13T14:20:38.817307",
-          "detected_intention": "translation_request",
-          "detected_context": "videojuegos_coordinacion",
-          "confidence": 0.92,
-          "suggested_phrases": [],
-          "is_correction": false,
-          "feedback_type": null
-        },
-        {
-          "role": "assistant",
-          "content": "Follow me",
-          "timestamp": "2026-07-13T14:20:38.821961",
+          "timestamp": "2026-07-13T14:23:46.118447",
           "detected_intention": null,
           "detected_context": null,
           "confidence": 0.0,
