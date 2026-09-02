@@ -1,10 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Setup script para inicializar el entorno del chatbot bilingüe.
 Instala dependencias, verifica la estructura y prepara el proyecto.
 """
 
-import os
 import sys
 import subprocess
 from pathlib import Path
@@ -38,7 +37,7 @@ def check_python_version():
 
 
 def create_directories():
-    """Crea las directorios necesarios."""
+    """Crea los directorios necesarios."""
     print_header("Creando estructura de directorios")
     dirs = [
         "data/user_progress",
@@ -60,9 +59,9 @@ def create_env_file():
         return
     
     if Path(".env.example").exists():
-        with open(".env.example", "r") as src:
+        with open(".env.example", "r", encoding="utf-8") as src:
             content = src.read()
-        with open(".env", "w") as dst:
+        with open(".env", "w", encoding="utf-8", newline="") as dst:
             dst.write(content)
         print_success(".env creado desde .env.example")
     else:
@@ -92,14 +91,21 @@ def run_tests():
             print_success("Todos los tests pasaron")
         else:
             print_error(f"Tests fallaron con código {result.returncode}")
+            sys.exit(1)
     except FileNotFoundError:
-        print_error("pytest no encontrado. Salta esta verificación.")
+        print_error("pytest no encontrado. Instala dependencias con: python3 setup.py --install")
+        sys.exit(1)
 
 
 def verify_imports():
-    """Verifica que los módulos principales se puedan importar."""
+    """Verifica que los módulos principales se puedan importar. Retorna False si fallan."""
     print_header("Verificando importaciones")
     try:
+        # Fija el repo root en sys.path si no está ya
+        repo_root = Path(__file__).resolve().parent
+        if str(repo_root) not in sys.path:
+            sys.path.insert(0, str(repo_root))
+        
         from src.storage import SQLiteUserRepository
         print_success("SQLiteUserRepository importado")
         
@@ -113,9 +119,11 @@ def verify_imports():
             CorrectionValidatorService,
         )
         print_success("Todos los servicios importados")
+        return True
     except ImportError as e:
         print_error(f"Error de importación: {e}")
-        sys.exit(1)
+        print_error("Instala las dependencias primero: python3 setup.py --install")
+        return False
 
 
 def print_summary():
@@ -124,8 +132,8 @@ def print_summary():
     print("✅ Proyecto listo para usar")
     print("\n📝 Próximos pasos:")
     print("  1. Editar .env si es necesario")
-    print("  2. Ejecutar: python src/advanced_chatbot.py")
-    print("  3. O revisar: python demo_interactive.py")
+    print("  2. Ejecutar: python3 src/advanced_chatbot.py")
+    print("  3. O revisar: python3 demo_interactive.py")
     print()
 
 
@@ -135,17 +143,23 @@ def main():
         check_python_version()
         create_directories()
         create_env_file()
-        verify_imports()
-        print("\n" + "="*60)
-        print("  Instalar dependencias? (pip install -r requirements.txt)")
-        print("  Ejecuta: python setup.py --install")
-        print("="*60 + "\n")
         
         if len(sys.argv) > 1 and sys.argv[1] == "--install":
             install_dependencies()
+            if not verify_imports():
+                sys.exit(1)
             run_tests()
-        
-        print_summary()
+            print_summary()
+        else:
+            print("\n" + "="*60)
+            print("  🚀 Instalación de dependencias")
+            print("  Ejecuta: python3 setup.py --install")
+            print("="*60 + "\n")
+            
+            # Intenta verificar sin fallar si falta algo
+            if not verify_imports():
+                print("\n⚠️  Las importaciones fallaron porque faltan dependencias.")
+                print("  Ejecuta: python3 setup.py --install\n")
     except Exception as e:
         print_error(f"Error no controlado: {e}")
         sys.exit(1)
