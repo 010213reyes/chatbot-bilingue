@@ -2,7 +2,7 @@
   "user_id": "demo_user",
   "created_at": "2026-07-13T14:23:46.099804",
   "language_level": "A2",
-  "total_conversations": 1,
+  "total_conversations": 2,
   "conversations": [
     {
       "session_id": "session_0862d665",
@@ -26,6 +26,41 @@
           "role": "assistant",
           "content": "Follow me",
           "timestamp": "2026-07-13T14:23:46.118447",
+          "detected_intention": null,
+          "detected_context": null,
+          "confidence": 0.0,
+          "suggested_phrases": [
+            "Follow me",
+            "Come with me",
+            "Let's go"
+          ],
+          "is_correction": false,
+          "feedback_type": null
+        }
+      ]
+    },
+    {
+      "session_id": "session_77d5aa1e",
+      "user_id": "demo_user",
+      "timestamp": "2026-07-26T13:23:10.508097",
+      "language_level": "A2",
+      "context_focus": "videojuegos_coordinacion",
+      "messages": [
+        {
+          "role": "user",
+          "content": "¿cómo se dice sígueme?",
+          "timestamp": "2026-07-26T13:23:10.508228",
+          "detected_intention": "translation_request",
+          "detected_context": "videojuegos_coordinacion",
+          "confidence": 0.92,
+          "suggested_phrases": [],
+          "is_correction": false,
+          "feedback_type": null
+        },
+        {
+          "role": "assistant",
+          "content": "Follow me",
+          "timestamp": "2026-07-26T13:23:10.509711",
           "detected_intention": null,
           "detected_context": null,
           "confidence": 0.0,

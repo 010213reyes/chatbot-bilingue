@@ -73,6 +73,44 @@
       "review_timestamp": "2026-07-13T14:27:17.112090",
       "reviewer_id": "admin",
       "reviewer_notes": "La corrección está vacía"
+    },
+    {
+      "id": "pc_3bc080be",
+      "user_id": "demo_user",
+      "session_id": "session_demo1",
+      "timestamp": "2026-07-26T13:23:10.542529",
+      "original_chatbot_response": "Follow me",
+      "user_correction": "Come with me, let's go",
+      "context": "videojuegos_coordinacion",
+      "intention": "translation_request",
+      "confidence": 0.85,
+      "status": "pending",
+      "validation_issues": [
+        "duplicate"
+      ],
+      "review_timestamp": null,
+      "reviewer_id": null,
+      "reviewer_notes": ""
+    },
+    {
+      "id": "pc_839b0ac2",
+      "user_id": "demo_user",
+      "session_id": "session_demo1",
+      "timestamp": "2026-07-26T13:23:10.551877",
+      "original_chatbot_response": "Test",
+      "user_correction": "",
+      "context": "videojuegos_coordinacion",
+      "intention": "correction",
+      "confidence": 0.8,
+      "status": "rejected",
+      "validation_issues": [
+        "empty",
+        "spam",
+        "incoherent"
+      ],
+      "review_timestamp": "2026-07-26T13:23:10.569296",
+      "reviewer_id": "admin",
+      "reviewer_notes": "La corrección está vacía"
     }
   ],
   "approved_phrases": [
